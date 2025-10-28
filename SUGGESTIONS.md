@@ -27,3 +27,15 @@ Response by original Nigel:
 Two Nigel's hey? Nigel says something very valuable. The special MOS FET for audio might replace germanium in a Leak amp . The germanium 0.5 V bias for two devices will be enough to drop them into the old circuit without modification ( remove drivers ) . I dare say with a little care using a scope it will be a marriage made in heaven . Exicon seem to need 1.2 V typical to do 100 mA . That means better than any silicon device even when complimentary feedback pairs ( 1.3 V ) . Dalingtons 2.5 V . I could right a page on this and not say much more . The industrial FET's might need 4 V.
 
 The function of R9 12 K and the 6n8 poly cap is to balance the VAS's at HF . It mimics the output devices . If the voltage is changed R9 needs changing . 6.5 mA 12 K = 78 V if +/- 52 V rails . You will loose the balance in the 3K9's if wrong . Tweak until about like here . Approximately reduce the resistor exactly as the rails . Thus +/- 40 V is 9K1 . R3 is 1K / V . It would need 39K for 40 V.
+
+
+johnnyx contributes this:
+
+
+I found that at least 200 Ohm gate stoppers are necessary.
+
+The Maplin MOSFET amplifier specified 100 Ohm resistors, enabled MHz oscillation in the output MOSFETs.
+
+This oscillation eventually caused the Zobel network resistors to burn out.
+
+I experimented to find the cause, and found that the specified gate resistors were too low, after eliminating all other options.

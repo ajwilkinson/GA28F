@@ -1,0 +1,57 @@
+LTspice 24.1.10 for Windows
+Circuit: C:\src\ajw-io\GA28F\Maplin LatFet Spice Model\Maplin LatFet Amp.net
+Start Time: Tue Oct 28 16:44:40 2025
+Options: maxstep=0.48831106u  plotwinsize=0
+solver = Normal
+Maximum thread count: 12
+tnom = 27
+temp = 27
+method = trap
+Direct Newton iteration failed to find .op point.  (Use ".option noopiter" to skip.)
+Starting Gmin stepping
+Gmin = 10
+Gmin = 1.07374
+Gmin = 0.115292
+Gmin = 0.0123794
+Gmin = 0.00132923
+Gmin = 0.000142725
+Gmin = 1.5325e-05
+Gmin = 1.6455e-06
+Gmin = 1.76685e-07
+Gmin = 1.89714e-08
+Gmin = 2.03704e-09
+Gmin = 2.18725e-10
+Gmin = 2.34854e-11
+Gmin = 2.52173e-12
+Gmin = 2.70769e-13
+Gmin = 0
+Gmin stepping succeeded in finding the operating point.
+
+Total elapsed time: 1.384 seconds.
+
+Files loaded:
+C:\src\ajw-io\GA28F\Maplin LatFet Spice Model\Maplin LatFet Amp.net
+C:\Users\antho\AppData\Local\LTspice\lib\cmp\standard.dio
+C:\Users\antho\AppData\Local\LTspice\lib\cmp\standard.bjt
+C:\Users\antho\AppData\Local\LTspice\lib\cmp\standard.mos
+C:\src\ajw-io\GA28F\Maplin LatFet Spice Model\LatFet Models.txt
+
+Fourier components of  v(vout)
+N-Period=4
+DC component:-0.00414395
+
+Harmonic	Frequency	 Fourier 	Normalized	 Phase  	Normalized
+ Number 	  [Hz]   	Component	 Component	[degree]	Phase [deg]
+    1   	 1.000e+03	 4.005e+00	 1.000e+00	   90.33°	    0.00°
+    2   	 2.000e+03	 4.829e-05	 1.206e-05	 -100.84°	 -191.17°
+    3   	 3.000e+03	 3.435e-05	 8.578e-06	   16.43°	  -73.90°
+    4   	 4.000e+03	 1.418e-05	 3.541e-06	  -76.49°	 -166.82°
+    5   	 5.000e+03	 1.961e-05	 4.896e-06	    9.25°	  -81.08°
+    6   	 6.000e+03	 6.607e-06	 1.650e-06	  100.61°	   10.28°
+    7   	 7.000e+03	 2.569e-06	 6.414e-07	   -1.41°	  -91.74°
+    8   	 8.000e+03	 1.029e-05	 2.569e-06	   97.88°	    7.55°
+    9   	 9.000e+03	 4.544e-06	 1.135e-06	 -167.90°	 -258.23°
+   10   	 1.000e+04	 2.198e-06	 5.488e-07	   96.98°	    6.65°
+Partial Harmonic Distortion: 0.001633%
+Total Harmonic Distortion:   0.001692%
+
