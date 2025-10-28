@@ -1,0 +1,82 @@
+
+<!-- saved from url=(0052)https://www.angelfire.com/sd/paulkemble/sound7g.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="description" content="Sound and sound systems - an informal look.  Some early Hitachi FET amplifier designs."> 
+<meta name="keyword" content="sound, audio, music, stereo, hi fi, amplifier, power amplifier, hitachi, fet,">
+<link media="screen" href="https://www.angelfire.com/sd/paulkemble/sound7g.html" type="text" rel="StyleSheet">
+<style fprolloverstyle="">A:hover {
+	COLOR: #b40000
+}
+</style><title>A Paul Kemble web page - Hitachi Fet designs.</title>
+</head><body bgcolor="#000000" background="./A Paul Kemble web page - Hitachi Fet designs._files/oldpaper.jpg" bgproperties="fixed" text="#0033FF" link="#0066CC" vlink="#339966"><font face="Verdana, Helvetica, Arial," size="3">
+</font><blockquote><font face="Verdana, Helvetica, Arial," size="3"><br>
+
+<b>Hitachi FET amplifiers.</b><p>
+
+This design ranks as one of the simplest mosfet designs seen and given its' performance versus its' simplicity, has spawned a fair number of <a href="https://www.angelfire.com/sd/paulkemble/sound5b.html#mapmos">copies and derivatives</a> (application kindly sourced by Alister Sibbald).<br><br>
+
+</p><center><img src="./A Paul Kemble web page - Hitachi Fet designs._files/hitmosfet.gif" border="0"></center><br>
+
+Performance graphs are shown below.<br><br>
+
+<center><img src="./A Paul Kemble web page - Hitachi Fet designs._files/hitfetgrab.gif" border="0"></center><br>
+
+Output devices were easily paralleled (with their attendant gate resistors) for higher power handling, 100W output devices being specified for both designs; either the (140V, 7A) TO3 2SK134/2SJ49 or the TO3P 2SK1057/2SJ161 which are more expensive but are arguably easier to mount.  These had an Rds of 1R7 each.  Other devices like the TO3P (140V, 8A) 2SK413/2SJ118 or the 2SK414/2SJ119 (160V,8A) had an Rds of 0R5 (Rds = Vds(sat) / Id, eg; 2SK134/2SJ49 = 12/7 = 1R71).  Employing a lower Rds can give rise to lower dissipation in the output devices and allow the use of a lower voltage supply and/or a smaller heat-sink, eg; ±57V6 instead of ±65V for 100W/8R.<p>
+
+'Gate-stopper' resistors ideally should be non-inductive and mounted as close to the gate lead as possible.  Chip resistors are considered best but must be over-rated to cope with the high temperatures experienced given their close proximity to the output devices.</p><p>
+
+The drive power requirements for a FET are smaller than that needed for a bipolar device the only energy required, which increases with frequency, to charge/discharge the gate-to-source-capacitance.  At 100W and 100kHz this would be<br><br>
+
+</p><center><img src="./A Paul Kemble web page - Hitachi Fet designs._files/hitfetform1.gif" border="0"></center><br>
+
+so the components for a class B driver stage are not required, the drive being taken directly from a class A predriver, normally found in a bipolar amplifier.<p>
+
+Ideally then, a low Qg (total gate charge) and low Rds(on) are desired for the best amplifier performance.  Unfortunately, these are conflicting requirements since Rds(on) is inversely proportional to Qg for a typical MOSFET.  The design trade-off is one of cost versus performance.  A lower Rds(on) means lower I^2Rds(on) losses but the associated higher Qg translates into higher switching losses (losses = Qg x 10 x 1.2MHz).  A lower Rds(on) also means a larger silicon die and higher cost.  A higher Rds(on) means lower cost and lower switching losses but higher I^2Rds(on) losses.</p><p>
+
+Other advantages accrue from using FETs.  Bipolar transistors have a negative temperature coefficient, which means that as they heat up they pass more current, thus getting hotter, FETS have a positive temperature coefficient which means that the current they pass reduces as they heat up and, because of their architecture the heat will be spread over the entire chip instead of confined to hot-spots as in a bipolar type.  These devices then have an inherent safety feature built in as far as internal dissipation is concerned.  As a consequence the bias thermal stability or 'variable zener' circuits normally found in bipolar output stages, that themselves give rise to distortion or even stage failure, can be omitted also.  The simplified layout precludes the use of a bootstrap capacitor as well.</p><p>
+
+Any reduction in the component count, especially in the output stages, will not only reduce cost, and any attendant distortion, but can also  increase reliability and improve sonic performance since there is less to 'get in the way'.  This has probably been the reason why this design has been favoured and adapted by many, including the author.  In keeping with the rest of the approach, the bias pot should be a high-quality type.  If the wiper has multiple contacts this will enhance performance.</p><p>
+
+The transconductance |yfs| of power FETs (1-2.5S) are a fraction of those for a given bipolar type with an Ic of, say, 1A.<br><br>
+
+</p><center><img src="./A Paul Kemble web page - Hitachi Fet designs._files/hitfetform2.gif" border="0"></center><br>
+
+In an emitter/source follower the relationship between input and output is expressed as Rl / (Rl + 1/|yfs|), the non-linear part, |yfs|, causing distortion.  Thus a FET can distort at levels 20dB higher than a bipolar type.  To overcome this, a larger than usual open loop gain and more negative feedback are required, compared to a bipolar circuit.<p>
+
+Due to the high frequencies of which these devices are capable ('almost embarrasingly so compared to bipolar types' according to one designer), advice to avoid parasitic oscillations was provided; mounting the output devices directly to a PCB, single-point earthing, substantial supply and output wiring, the use of a output inductor to be determined experimentally and that the PCB should 'flow topographically from input to output', see also <a href="https://www.angelfire.com/sd/paulkemble/sound9.html#part8">Instabilities</a>.</p><p>
+
+A second more complex version using FETs throughout was also described.  This was a DC design with low-impedance offsetting applied to the input pair, with stabilisation of their feeds and a separate supply for the input and driver stages.<br><br>
+
+</p><center><img src="./A Paul Kemble web page - Hitachi Fet designs._files/hitmosfet2.gif" border="0"></center><br>
+
+This gave a slight increase of THD at high frequencies.<br><br>
+
+<center><img src="./A Paul Kemble web page - Hitachi Fet designs._files/hitfet2gra.gif" border="0"></center><br>
+
+Alister notes that
+<blockquote><i>"For whatever reason, the thing worked very well.  I was doing an MSc in the Audio engineering lab under Malcolm Hawksford at Essex University at the time.  We knocked some up and were quite taken aback by how good they were - especially as we were in a 'mode' with our designs to see just how complex we could make them.  The Hitachi Mosfet datasheet (and thinking back, it must have been early
+'80s) generated a host of copies. The <a href="https://www.angelfire.com/sd/paulkemble/sound5b.html#mapmos">Maplin Mosfet</a> amp kit was well known.  The current BK Electronics modules look as though they're based on it and there were innumerable commercial clones. It's one of those very simple circuits (like <a href="https://www.angelfire.com/sd/paulkemble/sound3b.html">JLH's 10W class A</a>) that somehow just seem to get it right.  Particularly, as we found in Hawksford's lab, if you use two of them as a
+"Balanced" amp - a finding which set some of us off on a search for the "Earth effect" on the assumption that the improvement was largely down to balanced connection keeping high currents out of the earth connections.
+ Malcolm actually published a number of AES papers (the "Pontoon" amplifiers) triggered by our investigations of these Balanced Mosfet amps."</i></blockquote>
+
+Another contribution
+<blockquote><i>"Many companies have cloned this circuit but have seriously omitted one essential fact in the above formula 6 volts were chosen as the bias voltage however many circuits using this formula for Mosfets have under biased the devices leading to an early roll off of the high frequencies particularly when multiple devices is being used.  since the voltage is Squared and many users go for 13 volts bias which becomes 169 volts squared when put into the formula above the drive is nothing like the 3.24mW but hugely different.  E.G for 12 volt drive 13 mW will be required minimum, taking into account that the P and N versions have different I/P capacitance which must have the right charge for correct operation for the required bias.  this means for example in the David Hafler circuit with two pairs of O/P devices the drivers must work with at least 10 m/A through them to get the correct bias. Some circuits i have seen have many pairs of output devices and woefully underbiased which will limit the drive and will not give the best performance for mosfets, it is a mistake that is inherent with people believing that mosfets do not need much drive they should read the Hitachi apps notes to understand that I/P bias is needed to charge the capacitances in the gates and when multiple devices are used the capacitance increases by the number of devices. Summing up the single pair of mosfets at 6 volts bias need 3.24mW. with 12 volts per single pair 13 mW is required therefore for two pairs 26mW is required etc now a different picture emerges and is not well understood.
+
+Sorry cannot make this simpler.
+Kind regards
+Vincent Hawtin"</i></blockquote>
+
+Compare to another <a href="https://www.angelfire.com/sd/paulkemble/sound7e.html#part1">Hitachi design</a> which uses a 'different' layout, the earlier <a href="https://www.angelfire.com/sd/paulkemble/sound8e.html">Yamaha B-1</a>, JLHs' Hart <a href="https://www.angelfire.com/sd/paulkemble/sound3d.html#k1100">K1100</a> and a 70s' RCA <a href="https://www.angelfire.com/sd/paulkemble/sound7.html#part2b">design</a>.<p>
+
+</p><center>Contact me at paulkemble@hotmail.com<br>
+especially if you want additional content to this page<br>or if you find 
+any links that don't work.  Don't forget<br>to add the page title or URL.  Take care!</center><p>
+
+</p><center>Back to <a href="https://www.angelfire.com/sd/paulkemble/soundindex.html">index</a>, <a href="https://www.angelfire.com/sd/paulkemble/sound.html">sound</a>, <a href="https://www.angelfire.com/sd/paulkemble/soundb.html">tips</a> or <a href="https://www.angelfire.com/sd/paulkemble/index.html">home</a>.</center>
+
+</font>
+</blockquote>
+
+
+
+</body></html>

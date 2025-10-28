@@ -1,0 +1,9 @@
+(from Nigel Pearson at diyAudio)
+
+The 400 watts is on a very good day without a long test into perhaps into 6R with rails at +/- 57 V rails.
+
+300 W 8R is realistic. I have seem 28 Vrms at 8R if single amp. Double output devices in bridge might see 56 Vrms into 8 R. You might see 600watts 4 R if so. If you push for a long period clipping is seen and 21 V 6R is the single output possibility. As Andrew says a 75 W amp. Music being different the power figures are realistic. Hypex suggest 10 to 1 peaks to true RMS. Techno music 3 to 1. 6 to 1 a good figure.
+
+The thing to grasp is that this simple amp is outperforming many. The HF distortion is excellent. Certainly some crossover distortion is seen. The amp deals with it better than bi polar transistor amps of simple design ( read most).
+
+For fun I took out one of the VAS stages and replaced the current source ( mirror ) with a bootstrapped collector load as in 1960's amps ( 2SD756 to MOS FET's and + rail 2 x 3K9 is about right , I used 22 uF polyester as that seems able to control distortion , 100 uF would be seen as too small by most ). Bootstrapping said to be unusable with MOS FET's as the gain is too low ( 0.78 ). Not so. For fun I connected a second bootstrap to the input to allow it to be driven from a valve preamp using anode out ( feedback side to 2 x 24 K input shunt resistors ). The amp was compensated for unity gain if required. Then a filter was incorporated into the feedback loop to serve an OB speaker sub-woofer ( + 16 dB 30 Hz ). All in all it worked very well without any tweaking and made on tag strip. Distortion was arising about one octave below the Maplin. 22 kHz - 62 dB 5 watts mostly second harmonic. As I stopped at 1 kHz that was fine. 5 devices and still good Hi Fi.
